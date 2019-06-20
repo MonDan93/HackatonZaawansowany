@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<div class="container">
+
+
+    <h1>Log in:</h1>
+
+    {% if messages %}
+    <div class="alert alert-danger">{{ messages[0] }}</div>
+    {% endif %}
+
+    <form method="post" action="">
+        <table>
+            <tr>
+                <td>username:</td>
+                <td><input type="text" class="form-control" name="username"></td>
+            </tr>
+            <tr>
+                <td>password:</td>
+                <td><input type="password" class="form-control" name="password"></td>
+            </tr>
+            <tr>
+                <td style="text-align: end"><input type="submit" class="btn btn-secondary" value="Submit"></td>
+                <td>
+                    <a href="/register" class="btn btn-primary "  role="button" > Register</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<style>
+    td {
+        padding: 10px;
+    }
+
+</style>
